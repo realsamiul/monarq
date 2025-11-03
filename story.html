@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>M0NARQ AI - Our Story</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="The story behind M0NARQ AI is one of constraints, physics, and arbitrage."
+    />
+    <meta
+      name="keywords"
+      content="digital, design, studio, netherlands, exo, ape"
+    />
+    <meta name="author" content="Exo Ape" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Exo Ape" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://exoape.com/" />
+    <meta
+      property="og:description"
+      content="The story behind M0NARQ AI is one of constraints, physics, and arbitrage."
+    />
+    <meta
+      property="og:image"
+      content="assets/img/story/01-flood-sar.jpg"
+    />
+    <meta property="og:title" content="M0NARQ AI - Our Story" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@ExoApe" />
+    <meta name="twitter:url" content="https://exoape.com/" />
+    <meta
+      name="twitter:description"
+      content="The story behind M0NARQ AI is one of constraints, physics, and arbitrage."
+    />
+    <meta
+      name="twitter:image:src"
+      content="assets/img/story/01-flood-sar.jpg"
+    />
+    <meta name="twitter:title" content="M0NARQ AI - Our Story" />
+    <meta name="msapplication-TileColor" content="#0d0e13" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="assets/favicon/site.webmanifest"
+      crossorigin="use-credentials"
+    />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#e0030a"
+    />
+    <link rel="canonical" href="https://exoape.com/" />
+    
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/story.css" />
+  </head>
+  <body>
+    <div id="__nuxt">
+      <div id="__layout">
+        <div class="app is-sand">
+          <div class="page" data-v-3be624d3>
+            <div class="overlay" data-v-3be624d3></div>
+            <div class="scroll is-story" data-v-3be624d3>
+              
+              <section id="chapter-1" class="pinned" data-nav-section data-nav-title="Constraint">
+                 <div class="background">
+                    <img class="bg" src="assets/img/story/01-flood-sar.jpg" alt="SAR flood map overlay" />
+                 </div>
+                 <div class="content-wrapper">
+                      <h2>The Constraint</h2>
+                      [span_0](start_span)<p>One laptop, $300 in cloud credits—Sylhet was already under water.[span_0](end_span) [span_1](start_span)Seven days for a manual flood trace was seven days too late.[span_1](end_span) So we built HAWKEYE: SegFormer-B2 trained on physics-generated pseudo-labels. [span_2](start_span)SAR backscatter VV&lt;0.2 (smooth water), NDWI&gt;0.1 ((B3-B8)/(B3+B8), high moisture), slope&lt;0.05 radians (gravity constraint).[span_2](end_span) [span_3](start_span)Three rules, zero human annotations, 91% mean IoU.[span_3](end_span) Thirty minutes, start to finish.</p>
+                      [span_4](start_span)<span class="tag">91 % mIoU</span>[span_4](end_span)
+                 </div>
+              </section>
+        
+              <section id="chapter-2" class="pinned" data-nav-section data-nav-title="Physics">
+                 <div class="background">
+                    <img class="bg" src="assets/img/story/02-topography.jpg" alt="Digital elevation model with simulated water flow arrows" />
+                 </div>
+                 <div class="content-wrapper">
+                      <h2>The Physics</h2>
+                      <p>When you don't have labels, embed what you know. [span_5](start_span)Water flows downhill—always.[span_5](end_span) Vegetation reflects near-infrared strongly—always. [span_6](start_span)These aren't priors to tune; they're laws to enforce.[span_6](end_span) [span_7](start_span)Physics-informed loss functions penalize predictions that violate conservation of mass or energy balance.[span_7](end_span) [span_8](start_span)The model learns to see floods not as pixel patterns but as hydrological events constrained by terrain and gravity.[span_8](end_span) [span_9](start_span)This is why it generalizes to new river basins it's never seen.[span_9](end_span)</p>
+                      [span_10](start_span)<span class="tag">Zero Human Labels</span>[span_10](end_span)
+                 </div>
+              </section>
+              
+              <section id="chapter-3" class="pinned" data-nav-section data-nav-title="Arbitrage">
+                 <div class="background">
+                    <img class="bg" src="assets/img/story/03-foundation-model.jpg" alt="Satellite image grid highlighting Bangladesh tile" />
+                 </div>
+                 <div class="content-wrapper">
+                      [span_11](start_span)<h2>The Arbitrage of Attention</h2>[span_11](end_span)
+                      [span_12](start_span)<p>Allen AI spent $2M training SatlasPretrain on 302 million satellite labels.[span_12](end_span) Microsoft Research built LayoutLMv3 on millions of document images. [span_13](start_span)Both released open-source.[span_13](end_span) [span_14](start_span)We invest $150 fine-tuning SatlasPretrain on 10,000 Bangladesh-specific tiles (Sylhet floods, Chittagong landslides, Sundarbans mangroves).[span_14](end_span) [span_15](start_span)Result: 15-20% accuracy improvement over the generic giant, at 0.0075% of their training cost.[span_15](end_span) [span_16](start_span)This is the arbitrage—piggyback on foundation model R&D, add irreplaceable local data, win emerging markets Google ignores.[span_16](end_span) [span_17](start_span)Big Tech optimises for Fortune-500 margins; we mine the 6 dB signal they overlook.[span_17](end_span)</p>
+                      [span_18](start_span)<span class="tag">0.0075% Training Cost</span>[span_18](end_span)
+                 </div>
+              </section>
+        
+              <section id="chapter-4" class="pinned" data-nav-section data-nav-title="Federation">
+                 <div class="background">
+                    <img class="bg" src="assets/img/story/04-federated-edge.jpg" alt="Collage showing federated edge devices" />
+                 </div>
+                 <div class="content-wrapper">
+                      <h2>The Federation</h2>
+                      [span_19](start_span)<p>Bangladesh's 4,000 garment factories will never pool their machine sensor data—it's trade-secret-level intelligence on production efficiency, failure rates, maintenance schedules.[span_19](end_span) [span_20](start_span)The only path forward is federated: each factory's $50 Raspberry Pi trains an LSTM locally on vibration, temperature, and acoustic streams.[span_20](end_span) Only encrypted model gradients (homomorphic encryption, ε=1.0 differential privacy) travel to our aggregation server. [span_21](start_span)The global model improves collectively;[span_21](end_span) no factory sees another's data. [span_22](start_span)Thirty percent downtime reduction in our 5-factory pilot, with zero data leakage.[span_22](end_span)</p>
+                      [span_23](start_span)<span class="tag">Zero Data Leakage</span>[span_23](end_span)
+                 </div>
+              </section>
+              
+              <section id="chapter-5" class="pinned" data-nav-section data-nav-title="Outcome">
+                 <div class="background">
+                    <img class="bg" src="assets/img/story/05-decision.jpg" alt="Emergency responders viewing flood polygons on tablet" />
+                 </div>
+                 <div class="content-wrapper">
+                      [span_24](start_span)<h2>The Outcome</h2>[span_24](end_span)
+                      <p>Insight dies in slide decks. [span_25](start_span)We wire predictions directly into the systems that move freight, dispatch medics, and approve licenses—so the loop closes itself.[span_25](end_span)</p>
+                      [span_26](start_span)<span class="tag">30 min vs 7 Days</span>[span_26](end_span)
+                 </div>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav-container">
+        <div class="dynamic-island" id="dynamicIsland">
+            <button class="nav-arrow prev" id="prevBtn">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor"/>
+                </svg>
+            </button>
+
+            <div class="island-text" id="islandText">
+                <span class="text-content">STORY</span>
+            </div>
+
+            <button class="nav-arrow next" id="nextBtn">
+                <svg viewBox="0 0 24 24" fill="none">
+                     <path d="M9 18L15 12L9 6" stroke="currentColor"/>
+                </svg>
+            </button>
+
+            <div class="progress-indicator">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+   
+         <button class="menu-button" id="menuButton">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+      
+             
+            <div class="menu-panel" id="menuPanel">
+                <a href="index.html" class="menu-item">Home</a>
+                <a href="index.html#work" class="menu-item">Work</a>
+                <a href="studio.html" class="menu-item">Studio</a>
+                <a href="story.html" classs="menu-item active">Story</a>
+                </div>
+        </button>
+    </nav>
+
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/js/vendor/CustomEase.min.js"></script>
+    <script src="assets/js/vendor/TextPlugin.min.js"></script>
+    <script src="assets/js/vendor/ScrollToPlugin.min.js"></script>
+
+    <script src="assets/js/exoape-animations.js"></script>
+    <script src="assetsjs/dynamic-island.js"></script>
+    
+  </body>
+</html>
