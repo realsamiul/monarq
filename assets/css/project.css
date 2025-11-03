@@ -988,7 +988,7 @@
   }
 }
 
-/* PROJECT: QUOTE */
+/* PROJECT: QUOTE (Duplicate but kept for VUE scoping) */
 .container[data-v-534727d8] {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -1436,7 +1436,7 @@
   }
 }
 
-/* PROJECT: VIDEO */
+/* PROJECT: VIDEO (Duplicate but kept for VUE scoping) */
 .container[data-v-13ed3b11] {
   margin: auto;
   position: relative;
@@ -1526,4 +1526,5 @@ NEW PROJECT-SPECIFIC STYLES
   z-index: 10;
   /* Make it invisible but clickable */
   opacity: 0;
+}
 }
