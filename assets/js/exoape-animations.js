@@ -751,8 +751,9 @@
         }
         
         if (this.circleIcon) {
+          // This path needs to be fixed. The original code had an incomplete definition near this part.
           gsap.to(this.circleIcon, {
-            x: 5,
+            x: '0.2vw', // Use a relative value for movement
             duration: this.duration,
             ease: 'exoImage'
           });
@@ -769,6 +770,7 @@
         }
         
         if (this.circleIcon) {
+          // The incomplete logic ends here
           gsap.to(this.circleIcon, {
             x: 0,
             duration: this.duration,
