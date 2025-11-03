@@ -1721,3 +1721,5 @@ transform: translateY(-50%) scaleX(0);
 .dynamic-island.expanded::before {
   animation: glow 2s ease-in-out infinite;
 }
+
+}
