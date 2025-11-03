@@ -1131,3 +1131,196 @@
     width: 100%;
   }
 }
+
+/* STUDIO: RECOGNITION */
+.recognition[data-v-611dd8d2] {
+  background-color: #f8f8f8;
+  background-color: var(--color-off-white);
+  padding: 21.3333333333vw 0;
+}
+@media (min-width: 601px) {
+  .recognition[data-v-611dd8d2] {
+    padding: 13.8888888889vw 0;
+  }
+}
+.container[data-v-611dd8d2] {
+  margin: 0 8vw;
+  position: relative;
+}
+@media (min-width: 601px) {
+  .container[data-v-611dd8d2] {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 0 8.3333333333vw;
+  }
+}
+@media (min-width: 601px) and (min-width: 601px) {
+  .container[data-v-611dd8d2] {
+    grid-column-gap: 2.2222222222vw;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (min-width: 601px) {
+  .label[data-v-611dd8d2] {
+    position: absolute;
+    top: 15.2777777778vw;
+  }
+}
+.title[data-v-611dd8d2] {
+  font-family: "Lausanne-300";
+  font-family: var(--font-f-lausanne-300);
+  font-size: 16vw;
+  font-size: var(--font-s-h1);
+  letter-spacing: -0.4vw;
+  letter-spacing: var(--font-ls-h1);
+  line-height: 16vw;
+  line-height: var(--font-lh-h1);
+  margin: 10.6666666667vw 0 6.9333333333vw;
+}
+.title[data-v-611dd8d2] .title-mask {
+  height: 15.2vw;
+  line-height: 12vw;
+}
+@media (min-width: 601px) {
+  .title[data-v-611dd8d2] .title-mask {
+    height: 10.0694444444vw;
+    line-height: 7.6388888889vw;
+  }
+}
+@media (min-width: 601px) {
+  .title[data-v-611dd8d2] {
+    grid-column: 4/13;
+    margin: 0 0 4.0277777778vw;
+  }
+}
+.publications[data-v-611dd8d2] {
+  color: rgba(13, 14, 19, 0.6);
+  color: var(--color-dark-grey-06);
+}
+@media (max-width: 600px) {
+  .publications[data-v-611dd8d2] {
+    margin: 0 0 6.9333333333vw;
+    width: 45.3333333333vw;
+  }
+}
+@media (min-width: 601px) {
+  .publications[data-v-611dd8d2] {
+    grid-column: 4/7;
+  }
+}
+.publications[data-v-611dd8d2] li {
+  margin: 0 0 5.3333333333vw;
+}
+@media (min-width: 601px) {
+  .publications[data-v-611dd8d2] li {
+    margin: 0 0 1.3888888889vw;
+  }
+}
+.publications[data-v-611dd8d2] li:last-child {
+  margin: 0;
+}
+.publications[data-v-611dd8d2] p {
+  font-family: "Lausanne-300";
+  font-family: var(--font-f-lausanne-300);
+  font-size: 3.7333333333vw;
+  font-size: var(--font-s-p);
+  letter-spacing: 0.0266666667vw;
+  letter-spacing: var(--font-ls-p);
+  line-height: 5.6vw;
+  line-height: var(--font-lh-p);
+}
+.publications[data-v-611dd8d2] a {
+  position: relative;
+  will-change: transform;
+}
+.publications[data-v-611dd8d2] a:after {
+  background: currentColor;
+  bottom: -2px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+  width: 100%;
+  will-change: transform;
+}
+@media (hover: hover) {
+  .publications[data-v-611dd8d2] a:hover:after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+.publications[data-v-611dd8d2] a:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media (hover: hover) {
+  .publications[data-v-611dd8d2] a:hover:after {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+@media (max-width: 600px) {
+  .awards[data-v-611dd8d2] {
+    width: 45.3333333333vw;
+  }
+}
+@media (min-width: 601px) {
+  .awards[data-v-611dd8d2] {
+    grid-column: 8/10;
+  }
+}
+.item[data-v-611dd8d2] {
+  display: flex;
+}
+.name[data-v-611dd8d2] {
+  font-family: "Lausanne-300";
+  font-family: var(--font-f-lausanne-300);
+  font-size: 4.8vw;
+  font-size: var(--font-s-h4);
+  letter-spacing: 0;
+  letter-spacing: var(--font-ls-h4);
+  line-height: 6.4vw;
+  line-height: var(--font-lh-h4);
+  line-height: 8vw;
+}
+@media (min-width: 601px) {
+  .name[data-v-611dd8d2] {
+    line-height: 2.7777777778vw;
+  }
+}
+.amount[data-v-611dd8d2] {
+  margin-left: auto;
+}
+@media (max-width: 600px) {
+  .amount[data-v-611dd8d2] {
+    font-family: "Lausanne-300";
+    font-family: var(--font-f-lausanne-300);
+    font-size: 3.2vw;
+    font-size: var(--font-s-subtitle);
+    letter-spacing: 0.0266666667vw;
+    letter-spacing: var(--font-ls-subtitle);
+    line-height: 4.2666666667vw;
+    line-height: var(--font-lh-subtitle);
+    line-height: 8vw;
+  }
+}
+@media (min-width: 601px) {
+  .amount[data-v-611dd8d2] {
+    font-family: "Lausanne-300";
+    font-family: var(--font-f-lausanne-300);
+    font-size: 3.7333333333vw;
+    font-size: var(--font-s-p);
+    letter-spacing: 0.0266666667vw;
+    letter-spacing: var(--font-ls-p);
+    line-height: 5.6vw;
+    line-height: var(--font-lh-p);
+    line-height: 2.7777777778vw;
+  }
+}
+/* STUDIO: SERVICES */
+/* This section already exists above (data-v-23da1f82) and is assumed to be correct */
+/* Adding closing brace for the whole file structure */
+}
