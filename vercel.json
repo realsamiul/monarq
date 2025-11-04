@@ -1,1 +1,15 @@
-{\n  "version": 1,\n  "routes": [\n    {\n      "src": "/(.*)",\n      "dest": "/$1"\n    }\n  ],\n  "images": {\n    "unoptimized": false\n  },\n  "static": {\n    "target": "static"\n  }\n}
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
