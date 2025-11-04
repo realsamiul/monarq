@@ -57,9 +57,9 @@
     position: absolute;
   }
 }
-.text-1[data-v-4c306161] {
-  visibility: hidden;
-}
+/*
+ * REMOVED .text-1[data-v-4c306161] rule that had 'visibility: hidden'
+ */
 @media (max-width: 600px) {
   .text-1[data-v-4c306161] {
     height: 100vh;
