@@ -869,7 +869,6 @@ NEW SECTION: STATS BELT
     justify-content: space-around;
     gap: 2rem;
   }
-
   .stats-belt li {
     font-size: var(--font-s-h3); /* Larger on desktop */
     line-height: var(--font-lh-h3);
