@@ -751,7 +751,7 @@
         }
         
         if (this.circleIcon) {
-          // This path needs to be fixed. The original code had an incomplete definition near this part.
+          // Icon animation on hover
           gsap.to(this.circleIcon, {
             x: '0.2vw', // Use a relative value for movement
             duration: this.duration,
@@ -817,32 +817,26 @@
     scrollTos: [],
     
     init(options = {}) {
-      console.log('🎬 Exo Ape Animations Initializing...');
       
       if (!registerEases()) {
         return;
       }
       
-      console.log('✅ GSAP plugins registered');
       
       // Viewport fix
       viewportFix();
-      console.log('✅ Viewport height fix applied');
       
       // Smooth scroll
       if (!options.disableSmoothScroll && !Utils.isMobile()) {
         this.smoothScroll = new SmoothScroll(options.smoothScroll || {});
-        console.log('✅ Smooth scroll initialized');
       }
       
       // Page transitions
       this.pageTransition = new PageTransition();
-      console.log('✅ Page transitions ready');
       
       // Auto-init elements
       this.autoInit();
       
-      console.log('✨ Exo Ape Ready!');
     },
     
     autoInit() {
@@ -851,7 +845,6 @@
         this.titleSplits.push(new TitleSplit(el));
       });
       if (this.titleSplits.length) {
-        console.log(`✅ ${this.titleSplits.length} title animations`);
       }
       
       // Marquee (studio.html only)
@@ -860,7 +853,6 @@
         this.marquees.push(new Marquee(el, { speed }));
       });
       if (this.marquees.length) {
-        console.log(`✅ ${this.marquees.length} marquee animations`);
       }
       
       // Image bloom
@@ -875,7 +867,6 @@
         this.parallaxElements.push(new Parallax(el, { speed }));
       });
       if (this.parallaxElements.length) {
-        console.log(`✅ ${this.parallaxElements.length} parallax elements`);
       }
       
       // Scroll indicators
@@ -883,7 +874,6 @@
         this.scrollTos.push(new ScrollTo(el));
       });
       if (this.scrollTos.length) {
-        console.log(`✅ ${this.scrollTos.length} scroll indicators`);
       }
       
       // Canvas videos (story.html has 4)
@@ -893,7 +883,6 @@
         this.canvasVideos.push(new CanvasVideo(el, { frameCount, folder }));
       });
       if (this.canvasVideos.length) {
-        console.log(`✅ ${this.canvasVideos.length} canvas videos`);
       }
       
       // Video hovers
@@ -903,7 +892,6 @@
         }
       });
       if (this.videoHovers.length) {
-        console.log(`✅ ${this.videoHovers.length} video hovers`);
       }
       
       // Fade-ins
@@ -911,7 +899,6 @@
         this.fadeIns.push(new FadeIn(el));
       });
       if (this.fadeIns.length) {
-        console.log(`✅ ${this.fadeIns.length} fade-in animations`);
       }
       
       // Link buttons (19 in index, 11 in studio, 1 in story)
@@ -919,7 +906,6 @@
         this.linkButtons.push(new LinkButton(el));
       });
       if (this.linkButtons.length) {
-        console.log(`✅ ${this.linkButtons.length} link buttons`);
       }
     },
     
