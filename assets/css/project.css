@@ -33,13 +33,7 @@
     position: absolute;
   }
 }
-.text-1[data-v-03cf5fcb] {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  visibility: hidden;
-}
+
 .is-android .text-1[data-v-03cf5fcb] {
   height: 90vh;
 }
