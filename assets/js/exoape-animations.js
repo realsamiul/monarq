@@ -829,6 +829,43 @@
       // Smooth scroll
       if (!options.disableSmoothScroll && !Utils.isMobile()) {
         this.smoothScroll = new SmoothScroll(options.smoothScroll || {});
+        
+        // =================================
+        // ===   THIS IS THE CORRECTED   ===
+        // ===     SCROLLPROXY FIX         ===
+        // =================================
+        const scroller = this.smoothScroll;
+        
+        ScrollTrigger.scrollerProxy(document.body, {
+          scrollTop(value) {
+            if (arguments.length) {
+              // This is GSAP's 'setter' for scroll
+              // We must set it instantly
+              scroller.target = value;
+              scroller.current = value;
+              // Manually update the transform
+              document.body.style.transform = `translate3d(0, ${-scroller.current}px, 0)`;
+            }
+            // This is GSAP's 'getter' for scroll
+            return scroller.current;
+          },
+          getBoundingClientRect() {
+            // Required for ScrollTrigger
+            return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+          },
+          // Tell ScrollTrigger that pinning should be done via transform
+          pinType: "transform"
+        });
+        
+        // Link the custom scroll event to ScrollTrigger's update method
+        window.addEventListener('exoscroll', () => ScrollTrigger.update());
+        
+        // Set the default scroller for all ScrollTriggers
+        ScrollTrigger.defaults({ scroller: document.body });
+        // =================================
+        // ===         END OF FIX        ===
+        // =================================
+
       }
       
       // Page transitions
