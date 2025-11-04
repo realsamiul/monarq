@@ -1700,6 +1700,79 @@ transform: translateY(-50%) scaleX(0);
   box-shadow: 0 0 6px rgba(10, 132, 255, 0.5);
 }
 
+/* IMAGE FALLBACK STYLES */
+.fallback-image {
+  position: relative;
+  background: var(--color-dark-grey-02);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+.fallback-image::after {
+  content: '!';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-f-lausanne-500);
+  font-size: var(--font-s-h4);
+  color: var(--color-dark-grey);
+}
+
+/* Improve image loading behavior */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* WebP fallback for older browsers */
+.no-webp .webp {
+  display: none;
+}
+
+.webp .no-webp {
+  display: none;
+}
+
+/* Image loading states */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.image-container.is-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-dark-grey-02);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.6; }
+}
+
+
 /* Glow Effect */
 @keyframes glow {
   0%, 100% { opacity: 0.3;
